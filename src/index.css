@@ -1,0 +1,389 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
+
+html,body { height:100%; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.quote {
+  font-style: italic;
+}
+
+p, li {
+  font-size: 0.85vw;
+}
+
+h1 {
+  font-size: 1.8vw;
+}
+
+h4 {
+  font-size: 0.9vw;
+}
+
+.burgerButton {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  [class*="All"] {
+    min-height: 205vw !important;
+  }
+  [class *= "navBar"] {
+    position: fixed;
+    min-height: 205vw !important;
+  }
+  [class *= "navBarButtonsDiv"] {
+    position: relative;
+    display: grid;
+  }
+  [class *= "navBarButton"] {
+    position: relative;
+    margin-left: 5vw;
+    min-height: 5vw !important;
+    padding: 0;
+  }
+  [class *= "logoDiv"] {
+    margin-left: 5vw;
+    margin-top: 20vw;
+    margin-bottom: 10vw !important;
+  }
+  [class *= "homeImage"] {
+    height: 200vw !important;
+  }
+  [class *= "displayNone"] {
+    display: none;
+  }
+  [class *= "burgerButton"] {
+    display: grid;
+    position: relative;
+    z-index: 10;
+    background-color: #262627;
+    min-width: 13vw;
+    min-height: 13vw;
+    padding: 3vw;
+  }
+  [class *= "burgerLine"] {
+    position: relative;
+    z-index: 1;
+    background-color: #262627;
+    height: 93%;
+    color: rgba(38, 38, 39, 0);
+  }
+}
+
+
+
+.All {
+  display: flex;
+  min-height: 44vw;
+  height: 100%;
+}
+
+.navBar {
+  min-height: 44vw;
+  /*height: 100%;*/
+  /*width: 15%;*/
+  background-color: #262627;
+  min-width: 300px;
+  max-width: 100%;
+  /*width: 15%;*/
+  /*min-width: 200px;*/
+  /*position: fixed;*/
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /*overflow-x: hidden;*/
+  padding-top: 5%;
+}
+
+
+.logoDiv {
+  margin-bottom: 50%;
+}
+
+.logo {
+  position: relative;
+  left: 1vw;
+  text-decoration: none;
+  color: white;
+  font-family: "Bauhaus 93";
+}
+
+
+.navBarButtonsDiv {
+  display: grid;
+  position: relative;
+  /*left: 1vw;*/
+}
+
+.navBarButton {
+  text-decoration: none;
+  color: white;
+  justify-content: left;
+  padding: 5% 0% 5% 5%;
+}
+
+.navBarButton:hover {
+  color: #eb1846;
+  background-color: #0c0c0c;
+}
+
+
+.content {
+  /*margin-left: 15%;*/
+  /*margin-left: 300px;*/
+  position:relative;
+  display: grid;
+  height: 100%;
+}
+
+.homeImage {
+  position: relative;
+  height: 50vw;
+  width: 100%;
+}
+
+/*.contentDiv1 {*/
+/*  background-image: url("../src/images/IMG_2143.jpg");*/
+/*}*/
+
+
+.contentDiv2 {
+  position: relative;
+  top: 0%;
+  background-color: #eb1846;
+}
+
+.contentDiv3 {
+  color: white;
+}
+
+.AboutContentDiv {
+  position: relative;
+  padding: 3% 5%;
+  /*margin-left: 300px;*/
+  display: grid;
+  color: white;
+}
+
+.aboutButtonsDiv {
+  padding: 2vw;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  gap: 2%;
+}
+
+.aboutLink {
+  text-decoration: none;
+  color: white;
+  /*margin-top: 10vw;*/
+  padding: 1vw;
+  border: 0.1vw solid white;
+}
+
+.aboutLink:hover {
+  background-color: #262627;
+}
+
+.carouselDiv {
+  /*margin-left: 300px;*/
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  min-width: 160px;
+  z-index: 1;
+  /*border-radius: 0.5vw;*/
+}
+
+.dropdownButton:hover ~ .dropdown-content{
+  display: grid;
+}
+
+.dropdown-content:hover {
+  display: grid;
+}
+
+.serviceInfo {
+  display: grid;
+  position: relative;
+  /*margin-top: 3%;*/
+  /*margin-left: 300px;*/
+  /*margin-right: 1vw;*/
+  background-image: url("../src/images/background1.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 56vw;
+  /*height: 100vh;*/
+  /*height: 100%;*/
+  /*position: absolute;*/
+  /*top: 0px;*/
+  /*bottom: 0px;*/
+  /*right: 0px;*/
+  /*left: 0px;*/
+  margin-bottom: 0px;
+}
+
+.serviceTitle {
+  color: white;
+  font-size: 1.3vw;
+  backdrop-filter: blur(2px);
+  /*padding: 3% 0%;*/
+}
+
+.serviceDiv {
+  /*background-color: rgba(38, 38, 39, 0.4);*/
+  /*border: 2vw black solid;*/
+  height: 100%;
+  border-radius: 2.7vw;
+  backdrop-filter: blur(2px);
+
+  color: white;
+}
+
+.serviceTitleSmall {
+  background-color: #185002;
+  width: 80%;
+  margin: 0% 10%;
+}
+
+.serviceText {
+  margin: 0% 2%;
+}
+
+.ServicePacksDiv {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  column-gap: 10rem;
+  justify-content: center;
+}
+
+.PackageName {
+  background-color: white;
+  color: #262627;
+}
+
+.Contact {
+  position: relative;
+  margin-top: 3%;
+  /*margin-left: 300px;*/
+}
+
+.ContactTitle {
+  color: white;
+  font-size: 1.3vw;
+}
+
+.ContactHeading {
+  color: #eb1846;
+}
+
+.ContactText {
+  color: white;
+}
+
+.ContactDetails {
+  text-align: justify;
+}
+
+.map {
+  height: 100%;
+  width: 40vw;
+}
+
+.ContactDiv {
+  display: grid;
+  grid-template-columns: 10% 150%;
+  column-gap: 10vw;
+  margin-right: 1vw;
+  margin-left: 1vw;
+  /* align-content: stretch; */
+  /*justify-content: space-between;*/
+/* align-items: start; */
+}
+
+.listItems {
+text-align: justify;
+}
+
+.marginTop {
+margin-top: 3%;
+}
+
+/*.Footer {*/
+/*  display: flex;*/
+/*  position: relative;*/
+/*  width: 100%;*/
+/*  height: auto;*/
+/*  bottom: 0%;*/
+/*  justify-content: center;*/
+/*  gap: 5%*/
+/*}*/
+
+.Flex {
+  display: flex;
+}
+
+.justifyText {
+  text-align: justify;
+}
+
+@media only screen and (max-width: 768px) {
+
+  [class *= "carouselDiv"] {
+    margin-top: 20vw;
+    margin-right: 20vw;
+    z-index: 0;
+  }
+  [class *= "serviceInfo"] {
+    height: 100%;
+  }
+  [class *= "serviceTitleHeading"] {
+    text-align: start;
+  }
+  [class *= "serviceTitleSmall"] {
+    width: 100%;
+    margin: 0;
+  }
+  [class *= "serviceText"] {
+    text-align: left;
+  }
+  [class *= "ServicePacksDiv"] {
+    display: contents !important;
+  }
+  [class *= "Pack"] {
+    margin: 0% 2%;
+  }
+  [class *= "ContactDiv"] {
+    display: inline-block;
+  }
+  p {
+    font-size: 4vw;
+  }
+  h1 {
+    font-size: 6vw;
+  }
+  li {
+    font-size: 4vw;
+  }
+  h4 {
+    font-size: 5vw;
+  }
+}
+
+
