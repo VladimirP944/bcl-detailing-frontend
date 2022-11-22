@@ -8,7 +8,7 @@ const NavBar = () => {
  
 
     useEffect(() => {
-        fetch("http://172.31.68.28:5050/Reservations/GetReservations", { method: "GET" })
+        fetch("http://ip-172-31-39-195.eu-central-1.compute.internal:5050/Reservations/GetReservations", { method: "GET" })
             .then(response => response.json())
             .then(response => setReservation(response))
             .then(() => console.log(reservation))
