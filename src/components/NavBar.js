@@ -6,13 +6,41 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const NavBar = () => {
     let [reservation, setReservation] = useState(null)
  
+    
 
     useEffect(() => {
-        fetch("http://ip-172-31-39-195.eu-central-1.compute.internal:5050/Reservations/GetReservations", { method: "GET" })
+        // Bcldetailing-backend-env-1 private ip
+        fetch("http://ip-172-31-25-32.eu-central-1.compute.internal:5050/Reservations/GetReservations", { method: "GET" })
             .then(response => response.json())
             .then(response => setReservation(response))
             .then(() => console.log(reservation))
     }, [])
+
+    useEffect(() => {
+        // Bcldetailing-backend-env-1 public
+        fetch("http://ec2-3-71-18-183.eu-central-1.compute.amazonaws.com:5050/Reservations/GetReservations", { method: "GET" })
+            .then(response => response.json())
+            .then(response => setReservation(response))
+            .then(() => console.log(reservation))
+    }, [])
+
+    useEffect(() => {
+        // bcldetailing-env-2
+        fetch("http://172.31.76.155:5050/Reservations/GetReservations", { method: "GET" })
+            .then(response => response.json())
+            .then(response => setReservation(response))
+            .then(() => console.log(reservation))
+    }, [])
+
+    useEffect(() => {
+        // bcldetailing-env-2
+        fetch("http://ip-172-31-76-155.eu-central-1.compute.internal:5050/Reservations/GetReservations", { method: "GET" })
+            .then(response => response.json())
+            .then(response => setReservation(response))
+            .then(() => console.log(reservation))
+    }, [])
+
+
 
 
     const toggleBurger = () => {
