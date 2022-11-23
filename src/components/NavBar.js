@@ -10,7 +10,7 @@ const NavBar = () => {
 
     useEffect(() => {
         // Bcldetailing-backend-env-1 private ip
-        fetch("http://ip-172-31-25-32.eu-central-1.compute.internal:5050/Reservations/GetReservations", { method: "GET" })
+        fetch("http://172.31.80.0/20:5050/Reservations/GetReservations", { method: "GET" })
             .then(response => response.json())
             .then(response => setReservation(response))
             .then(() => console.log(reservation))
