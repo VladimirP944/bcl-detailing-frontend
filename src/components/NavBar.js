@@ -9,7 +9,7 @@ const NavBar = () => {
     
 
     useEffect(() => {
-        fetch("http://ec2-3-76-21-107.eu-central-1.compute.amazonaws.com:5050/Reservations/GetReservations", { method: "GET" })
+        fetch("http://Bcl-backend-env.eu-central-1.elasticbeanstalk.com:5050/Reservations/GetReservations", { method: "GET" })
             .then(response => response.json())
             .then(response => setReservation(response))
             .then(() => console.log(reservation))
