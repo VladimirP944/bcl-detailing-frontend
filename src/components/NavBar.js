@@ -25,23 +25,12 @@ const NavBar = () => {
     }, [])
 
     useEffect(() => {
-        // bcldetailing-env-2
-        fetch("http://172.31.76.155:5050/Reservations/GetReservations", { method: "GET" })
+        
+        fetch("http://ip-172-31-25-32.eu-central-1.compute.internal:5050/Reservations/GetReservations", { method: "GET" })
             .then(response => response.json())
             .then(response => setReservation(response))
             .then(() => console.log(reservation))
     }, [])
-
-    useEffect(() => {
-        // bcldetailing-env-2
-        fetch("http://ip-172-31-76-155.eu-central-1.compute.internal:5050/Reservations/GetReservations", { method: "GET" })
-            .then(response => response.json())
-            .then(response => setReservation(response))
-            .then(() => console.log(reservation))
-    }, [])
-
-
-
 
     const toggleBurger = () => {
         let burger = document.getElementById("navId")
