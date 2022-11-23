@@ -9,24 +9,7 @@ const NavBar = () => {
     
 
     useEffect(() => {
-        // Bcldetailing-backend-env-1 private ip
-        fetch("http://172.31.80.0/20:5050/Reservations/GetReservations", { method: "GET" })
-            .then(response => response.json())
-            .then(response => setReservation(response))
-            .then(() => console.log(reservation))
-    }, [])
-
-    useEffect(() => {
-        // Bcldetailing-backend-env-1 public
-        fetch("http://ec2-3-71-18-183.eu-central-1.compute.amazonaws.com:5050/Reservations/GetReservations", { method: "GET" })
-            .then(response => response.json())
-            .then(response => setReservation(response))
-            .then(() => console.log(reservation))
-    }, [])
-
-    useEffect(() => {
-        
-        fetch("http://ip-172-31-25-32.eu-central-1.compute.internal:5050/Reservations/GetReservations", { method: "GET" })
+        fetch("http://ec2-3-76-21-107.eu-central-1.compute.amazonaws.com:5050/Reservations/GetReservations", { method: "GET" })
             .then(response => response.json())
             .then(response => setReservation(response))
             .then(() => console.log(reservation))
